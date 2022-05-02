@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>animation</title>
+
+        <style>
+            @keyframes grow{
+                from{
+                    left: 0%;
+                    font-size: 10px;
+                    color: white;
+                }
+                to{
+                    left: 50%;
+                    font-size: 100px;
+                    color: blue;
+                }
+            }
+            h1{
+                animation-name: grow;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <button>muje dabaao</button>
+        <h1>hello gaurav!</h1>
+
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
+                const h1=document.querySelector('h1');
+                h1.style.animationPlayState='paused';
+
+                document.querySelector('button').onclick = function(){
+                    if(h1.style.animationPlayState==='paused'){
+                        h1.style.animationPlayState='running';
+
+                    }
+                    else{
+                        h1.style.animationPlayState='paused';
+
+                    }
+
+                }
+            })
+        </script>
+    </body>
+</html>
