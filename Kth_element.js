@@ -1,3 +1,7 @@
+
+//k ki value given hogi utni value ka array me se smallest number 
+//to phle array ko decending order me krdiya phir k ki value -1 karke and aagya
+
 function Kth_element(arr,k){
 
 
