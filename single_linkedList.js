@@ -1,21 +1,44 @@
-class Singly_linked_list {
-    constructor() {
-        this.head = null;
-        this.tail = null;
-        this.length = 0;
+// const n1={
+//     data:100
+// };
+
+// const n2={
+//     data:200
+// };
+
+// n1.next=n2;
+// console.log(n1);
+
+class Node{
+    constructor(data,next=null){
+        this.data=data;
+        this.next=next;
     }
-    push(val) {
-        var newNode = new Node(val)
-        if (!this.head) {
-            this.head = newNode;
-            this.tail = this.head;
-        }
-        this.tail.next = newNode;
-        this.tail = newNode;
-    }
-    this.length++;
-return this;
 }
 
-var list = new Singly_linked_list();
-list.push("hello")
+class LinkedList{
+    constructor(){
+        this.head=null;
+        this.size=0;
+    }
+    inserFirst(data){
+        this.head=new Node(data,this.head)
+        console.log(this.head.next);
+    }
+
+    printListData(){
+        var current=this.head;
+        
+        while(current){
+            console.log(current.data);
+            current=current.next;
+        }
+    }
+}
+
+const ll = new LinkedList()
+ll.inserFirst(100);
+ll.inserFirst(200);
+ll.inserFirst(300);
+
+// ll.printListData();

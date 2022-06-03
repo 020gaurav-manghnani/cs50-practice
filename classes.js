@@ -24,8 +24,20 @@
      fullname(){
          console.log(`your full name is ${this.fn} ${this.ln}` );
      }
+     traverse(val){
+         var current=val;
+         while(current===val){
+             console.log(current.val);
+             current=current.next;
+         }
+        
+     }
  }
 
- let one=new Student("gaurav","manghnani");
- let two=new Student("agrwal","manghnani")
- one.fullname();
+ let list=new Student();
+ list.traverse("hello");
+ list.traverse("world");
+ list.traverse("!");
+
+
+ 
