@@ -48,9 +48,9 @@ class Stack{
 }
 // now creating an object for class stack to access it
 var stack=new Stack();
-stack.push(100);
-stack.push(200);
-stack.push(300);
+stack.push("first");
+stack.push("second");
+stack.push("third");
 // console.log(stack);
 stack.pop();
 stack.pop();
