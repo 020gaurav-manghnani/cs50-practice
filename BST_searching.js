@@ -55,17 +55,42 @@ class BST{
 
             }
             else{
-                // found=true;
-                console.log("found")
+                return true;
+                
             }
         }
-        return current;
+        return false;
     }
+    BFS(){
+        var node=this.root;
+        var data=[];
+        var queue=[];
+         queue.push(node);
+
+         while(queue.length){
+             node=queue.shift();
+             data.push(node.value);
+
+             if(node.left) queue.push(node.left);
+             if(node.right) queue.push(node.right);
+         }
+         console.log(data);
+       
+    }
+    
+    
 }
 
 var tree=new BST()
 tree.insert(10);
 tree.insert(9);
 tree.insert(11);
-tree.find(8);
-console.log(tree);
+tree.insert(2);
+tree.insert(1);
+tree.insert(20);
+
+tree.BFS();
+// console.log(data);
+
+// tree.find(8);
+// console.log(tree);
