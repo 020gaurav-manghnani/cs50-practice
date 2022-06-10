@@ -1,6 +1,6 @@
 class Node{
-    constructor(value) {
-        this.value=null;
+    constructor(value){
+        this.value=value;
         this.left=null;
         this.right=null;
     }
@@ -10,41 +10,19 @@ class BST{
         this.root=null;
     }
     insert(value){
-        var newNode= new Node(value);
+        var newNode=new Node(value);
         if(this.root===null){
             this.root=newNode;
-            return this;
+            console.log(this.root);
         }
         else{
-            var current=this.root;
-            while(true){
-                if(value<current.value){
-                    if(current.left===null){
-                        current.left=newNode;
-                        return this;
-                    }
-                    else{
-                        current=current.left;
-                    }
-                }
-                else if(value>current.value){
-                    if(current.right===null){
-                        current.right=newNode
-                        return this;
-                    }
-                    else{
-                        current=current.right;
-                    }
+            var current=this.root
+            console.log(current);
 
-                }
-            }
         }
-        
     }
 }
 
 var tree=new BST()
-tree.insert(10);
-tree.insert(9);
-tree.insert(11);
-console.log(tree);
+tree.insert(10)
+// console.log(tree)
