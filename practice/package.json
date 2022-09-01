@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@babel/standalone": "^7.17.11",
+    "prompt-sync": "^4.2.0"
+  }
+}
